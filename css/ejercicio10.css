@@ -1,0 +1,221 @@
+/* ===== Reset y base ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* ===== Contenedor principal ===== */
+.contenedor-convertidor {
+    background-color: #ffffff;
+    max-width: 480px;
+    width: 100%;
+    padding: 40px 36px;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    animation: aparecerCard 0.6s ease-out;
+}
+
+@keyframes aparecerCard {
+    from {
+        opacity: 0;
+        transform: translateY(30px) scale(0.96);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* ===== Icono decorativo ===== */
+.icono-termometro {
+    font-size: 48px;
+    margin-bottom: 12px;
+    animation: pulso 2s ease-in-out infinite;
+}
+
+@keyframes pulso {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+/* ===== Títulos ===== */
+h1 {
+    font-size: 26px;
+    font-weight: 700;
+    color: #1a1a2e;
+    margin-bottom: 6px;
+}
+
+.subtitulo {
+    color: #6c757d;
+    font-size: 14px;
+    margin-bottom: 28px;
+}
+
+/* ===== Formulario ===== */
+.formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    text-align: left;
+}
+
+.grupo-formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.grupo-formulario label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+}
+
+/* ===== Input con unidad ===== */
+.input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-wrapper input {
+    width: 100%;
+    padding: 14px 50px 14px 16px;
+    border: 1.5px solid #dee2e6;
+    border-radius: 12px;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    color: #333;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    background-color: #fff;
+}
+
+.input-wrapper input:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.18);
+}
+
+.input-wrapper input::placeholder {
+    color: #adb5bd;
+}
+
+.input-wrapper .unidad {
+    position: absolute;
+    right: 16px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #667eea;
+    pointer-events: none;
+}
+
+/* ===== Campo readonly (resultado) ===== */
+.grupo-resultado input {
+    background-color: #f0f2f5;
+    color: #1a1a2e;
+    font-weight: 600;
+    cursor: not-allowed;
+    border-color: #e0e0e0;
+}
+
+.grupo-resultado input:focus {
+    border-color: #e0e0e0;
+    box-shadow: none;
+}
+
+/* ===== Mensaje de error ===== */
+.mensaje-error {
+    color: #e63946;
+    font-size: 13px;
+    font-weight: 500;
+    min-height: 18px;
+    transition: opacity 0.3s;
+}
+
+/* ===== Botón Convertir ===== */
+.boton-convertir {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    padding: 14px 24px;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.3s, opacity 0.3s;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.35);
+}
+
+.boton-convertir:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.45);
+}
+
+.boton-convertir:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
+}
+
+.boton-convertir span {
+    margin-left: 8px;
+    display: inline-block;
+    transition: margin-left 0.3s;
+}
+
+.boton-convertir:hover span {
+    margin-left: 14px;
+}
+
+/* ===== Fórmula de referencia ===== */
+.formula {
+    margin-top: 24px;
+    padding: 12px 16px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    border-left: 4px solid #667eea;
+}
+
+.formula p {
+    font-size: 13px;
+    color: #6c757d;
+    text-align: left;
+}
+
+.formula strong {
+    color: #333;
+}
+
+/* ===== Animación de resultado ===== */
+@keyframes resultadoFlash {
+    0% { background-color: #e8edff; }
+    100% { background-color: #f0f2f5; }
+}
+
+.resultado-animado {
+    animation: resultadoFlash 0.6s ease-out;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 500px) {
+    .contenedor-convertidor {
+        padding: 28px 20px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+}

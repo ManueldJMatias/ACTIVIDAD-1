@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 10 - Convertidor °C a °F</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background-color: #f5f5f5;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        .convertidor {
+            background: white;
+            padding: 25px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            max-width: 400px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input[type="text"] {
+            padding: 8px;
+            width: 200px;
+            border: 1px solid #999;
+            border-radius: 4px;
+            font-size: 15px;
+        }
+
+        button {
+            margin-top: 15px;
+            padding: 8px 20px;
+            background-color: #4a7abc;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #3a6aac;
+        }
+
+        .resultado {
+            margin-top: 15px;
+        }
+
+        .error {
+            color: red;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+
+        .formula {
+            margin-top: 15px;
+            font-size: 13px;
+            color: #666;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Convertidor de Temperatura</h1>
+    <p>Ingresa grados Celsius y obtén su equivalente en Fahrenheit.</p>
+
+    <div class="convertidor">
+        <label for="celsius">Temperatura en °C:</label>
+        <input type="text" id="celsius" placeholder="Ej: 25">
+
+        <p id="mensajeError" class="error"></p>
+
+        <button onclick="convertir()">Convertir</button>
+
+        <div class="resultado">
+            <label for="fahrenheit">Resultado en °F:</label>
+            <input type="text" id="fahrenheit" readonly placeholder="—">
+        </div>
+
+        <p class="formula">Fórmula: °F = (°C × 9/5) + 32</p>
+    </div>
+
+    <script>
+        function convertir() {
+            var celsius = document.getElementById("celsius");
+            var fahrenheit = document.getElementById("fahrenheit");
+            var error = document.getElementById("mensajeError");
+
+            error.textContent = "";
+            var valor = celsius.value.trim();
+
+            if (valor === "") {
+                error.textContent = "Por favor, ingresa un valor.";
+                celsius.focus();
+                return;
+            }
+
+            if (isNaN(valor)) {
+                error.textContent = "Ingresa un número válido.";
+                celsius.focus();
+                return;
+            }
+
+            var c = parseFloat(valor);
+            var f = (c * 9 / 5) + 32;
+            fahrenheit.value = f.toFixed(2);
+        }
+    </script>
+</body>
+
+</html>
