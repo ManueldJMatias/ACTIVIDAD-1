@@ -1,4 +1,4 @@
-# 📚 Ejercicios de Programación Web
+#  Ejercicios de Programación Web
 
 Colección de 10 ejercicios prácticos de la materia **Programación Web** de la carrera de Ingeniería en Sistemas Computacionales. Cada ejercicio aborda conceptos fundamentales de desarrollo web front-end, desde la estructura básica de HTML hasta el uso de JavaScript para interactividad.
 
@@ -58,21 +58,7 @@ prograweb/
 
 ---
 
-##  Cómo Ejecutar
 
-1. **Clonar el repositorio:**
-   ```bash
-   git clone https://github.com/tu-usuario/prograweb.git
-   ```
-
-2. **Abrir en el navegador:**
-   - Abre `index.html` directamente en tu navegador, o
-   - Si tienes un servidor local (como XAMPP), coloca la carpeta en `htdocs/` y accede a:
-     ```
-     http://localhost/prograweb/
-     ```
-
----
 
 ##  Conceptos Practicados
 
@@ -87,8 +73,5 @@ prograweb/
 - CSS externo con selectores de clase
 - JavaScript: manipulación del DOM, validación de datos y eventos
 
----
 
-##  Licencia
 
-Proyecto con fines educativos.
