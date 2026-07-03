@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 14 - Operaciones con Arreglos</title>
+    <link rel="stylesheet" href="css/ejercicio14.css">
+</head>
+
+<body>
+    <h1>Operaciones con Arreglos</h1>
+    <p>Ingresa varios números separados por comas y obtén el mayor, menor y promedio.</p>
+
+    <div class="operaciones">
+        <label for="numeros">Números:</label>
+        <input type="text" id="numeros" placeholder="Ej: 10, 20, 30">
+
+        <p id="mensajeError" class="error"></p>
+
+        <button onclick="calcular()">Calcular</button>
+
+        <div class="resultado">
+            <label for="mayor">Número Mayor:</label>
+            <input type="text" id="mayor" readonly placeholder="—">
+        </div>
+
+        <div class="resultado">
+            <label for="menor">Número Menor:</label>
+            <input type="text" id="menor" readonly placeholder="—">
+        </div>
+
+        <div class="resultado">
+            <label for="promedio">Promedio:</label>
+            <input type="text" id="promedio" readonly placeholder="—">
+        </div>
+    </div>
+
+    <script src="js/ejercicio14.js"></script>
+</body>
+
+</html>

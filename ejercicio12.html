@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 12 - Convertidor Pesos a Dólares</title>
+    <link rel="stylesheet" href="css/ejercicio12.css">
+</head>
+
+<body>
+    <h1>Convertidor de Pesos a Dólares</h1>
+    <p>Ingresa la cantidad en pesos y obtén su equivalente en dólares.</p>
+
+    <div class="convertidor">
+        <label for="pesos">Pesos:</label>
+        <input type="text" id="pesos" placeholder="Ej: 100">
+
+        <p id="mensajeError" class="error"></p>
+
+        <button onclick="convertir()">Convertir</button>
+
+        <div class="resultado">
+            <label for="dolares">Resultado en Dólares:</label>
+            <input type="text" id="dolares" readonly placeholder="—">
+        </div>
+
+        <p class="formula">Fórmula: USD = MXN × 0.055</p>
+    </div>
+
+    <script src="js/ejercicio12.js"></script>
+</body>
+
+</html>

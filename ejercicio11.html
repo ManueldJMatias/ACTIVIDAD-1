@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 11 - Convertidor Km a Millas</title>
+    <link rel="stylesheet" href="css/ejercicio11.css">
+</head>
+
+<body>
+    <h1>Convertidor de Kilómetros a Millas</h1>
+    <p>Ingresa la distancia en kilómetros y obtén su equivalente en millas.</p>
+
+    <div class="convertidor">
+        <label for="kilometros">Distancia en Km:</label>
+        <input type="text" id="kilometros" placeholder="Ej: 10">
+
+        <p id="mensajeError" class="error"></p>
+
+        <button onclick="convertir()">Convertir</button>
+
+        <div class="resultado">
+            <label for="millas">Resultado en Millas:</label>
+            <input type="text" id="millas" readonly placeholder="—">
+        </div>
+
+        <p class="formula">Fórmula: M = K × 0.621371</p>
+    </div>
+
+    <script src="js/ejercicio11.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 40px;
+    background-color: #f5f5f5;
+}
+
+h1 {
+    color: #333;
+}
+
+.registro {
+    background: white;
+    padding: 25px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    max-width: 400px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+input[type="text"] {
+    padding: 8px;
+    width: 200px;
+    border: 1px solid #999;
+    border-radius: 4px;
+    font-size: 15px;
+}
+
+button {
+    margin-top: 15px;
+    padding: 8px 20px;
+    background-color: #4a7abc;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #3a6aac;
+}
+
+#listaEstudiantes {
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+.resultado {
+    margin-top: 15px;
+}
+
+.error {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+}
