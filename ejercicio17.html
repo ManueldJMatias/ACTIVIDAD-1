@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 17 - Local Storage y Closures</title>
+    <link rel="stylesheet" href="css/ejercicio17.css">
+</head>
+
+<body>
+    <h1>Lista de Tareas</h1>
+    <p>Agrega tareas y se guardarán en el Local Storage usando JSON y closures.</p>
+
+    <div class="contenedor-tareas">
+        <label for="inputTarea">Nueva tarea:</label>
+        <div class="input-grupo">
+            <input type="text" id="inputTarea" placeholder="Escribe una tarea...">
+            <button id="btnAgregar" onclick="agregar()">Agregar Tarea</button>
+        </div>
+
+        <p id="mensajeError" class="error"></p>
+
+        <h2>Tareas guardadas:</h2>
+        <ul id="listaTareas"></ul>
+    </div>
+
+    <script src="js/ejercicio17.js"></script>
+</body>
+
+</html>
