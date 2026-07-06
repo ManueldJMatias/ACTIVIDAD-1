@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 16 - Funciones Flecha</title>
+    <link rel="stylesheet" href="css/ejercicio16.css">
+</head>
+
+<body>
+    <h1>Calculadora con Funciones Flecha</h1>
+    <p>Ingresa dos números y selecciona la operación a realizar.</p>
+
+    <div class="calculadora">
+        <label for="numero1">Número 1:</label>
+        <input type="text" id="numero1" placeholder="Ej: 10">
+
+        <label for="numero2">Número 2:</label>
+        <input type="text" id="numero2" placeholder="Ej: 5">
+
+        <p id="mensajeError" class="error"></p>
+
+        <div class="botones">
+            <button onclick="calcularOperacion('suma')">Suma</button>
+            <button onclick="calcularOperacion('resta')">Resta</button>
+            <button onclick="calcularOperacion('multiplicacion')">Multiplicación</button>
+            <button onclick="calcularOperacion('division')">División</button>
+        </div>
+
+        <div class="resultado">
+            <label for="resultado">Resultado:</label>
+            <input type="text" id="resultado" readonly placeholder="—">
+        </div>
+    </div>
+
+    <script src="js/ejercicio16.js"></script>
+</body>
+
+</html>
